@@ -1,0 +1,38 @@
+img{
+    width: 6rem;
+}
+header{
+    background-color: #DA001E ;
+}
+
+.navbar-toggler{
+    border-width: 0.3rem;
+    border-color: #F9D0A3;
+
+}
+
+a, h1{
+    color: #F9D0A3 ;
+}
+
+ul{
+    margin-top: 1rem;
+}
+
+ul, ul a{
+    background-color: #F9D0A3;
+    color: #DA001E;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+ul a:hover{
+    color: #151217  ;
+}
+
+#logoHead{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
