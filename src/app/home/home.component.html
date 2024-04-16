@@ -25,7 +25,7 @@
                         <p>Description: <br>{{product.description}}</p>
                         <p>Prix: {{product.price | currency:'EUR'}}</p>
                     </div>
-                    <button>Découvrir</button>
+                    <button (click)="discoverProduct(product.id)">Découvrir</button>
                 </article>
             </div>
         </section>
