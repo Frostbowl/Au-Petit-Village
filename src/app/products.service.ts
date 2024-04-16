@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 
+export interface Product {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  price: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class ProductsService {
-  products= [
+  products: Product[]= [
     { id: 1,
       name:'Asterix',
       image: 'assets/img/asterix.jpg',
@@ -33,4 +41,9 @@ export class ProductsService {
   ]
 
   constructor() { }
+
+  getProducts(): Product[] {
+    return this.products;
+  }
+
 }

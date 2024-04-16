@@ -1,10 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Product } from './products.service';
 
 @Pipe({
-  name: 'filterByName'
+  name: 'filterByName',
 })
 export class FilterByNamePipe implements PipeTransform {
-  transform(products: any[], filterName: string): any[] {
+  transform(products: Product[], filterName: string): Product[] {
     if (!products || !filterName) {
       return products;
     }
