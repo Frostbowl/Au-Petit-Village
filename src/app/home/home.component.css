@@ -48,3 +48,7 @@ button{
     border: 0.3rem solid #DA001E;
     font-weight: bold;
 }
+
+input{
+    margin-left: 1rem;
+}

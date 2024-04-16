@@ -9,6 +9,7 @@ import { ProductsService } from '../products.service';
 export class HomeComponent implements OnInit {
   products: any[] = [];
   sortOrder: string = 'croissant';
+  filterName: string = '';
 
   constructor (private ProductsService: ProductsService) {}
   
