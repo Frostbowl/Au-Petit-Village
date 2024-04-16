@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { SortByPricePipe } from './sort-by-price.pipe';
+import { FilterByNamePipe } from './filter-by-name.pipe';
 
 registerLocaleData(localeFr);
 
@@ -24,7 +25,8 @@ registerLocaleData(localeFr);
     AboutComponent,
     FooterComponent,
     HomeComponent,
-    SortByPricePipe
+    SortByPricePipe,
+    FilterByNamePipe
   ],
   imports: [
     BrowserModule,

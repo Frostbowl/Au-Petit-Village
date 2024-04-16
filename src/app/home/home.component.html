@@ -9,17 +9,20 @@
             </p>
         </section>
         <section class="produits">
-            <h1>Nos figurines</h1>
-            <select [(ngModel)]="sortOrder" >
-                <option value="croissant">Trier par prix croissant</option>
-                <option value="decroissant">Trier par prix décroissant</option>
-            </select>
-            <div *ngFor="let product of products | sortByPrice: sortOrder">
+            <h1>Nos figurines !</h1>
+            <div class="search">
+                <select [(ngModel)]="sortOrder" >
+                    <option value="croissant">Trier par prix croissant</option>
+                    <option value="decroissant">Trier par prix décroissant</option>
+                </select>
+                <input type="text" placeholder="Recherche par nom" [(ngModel)]="filterName">
+            </div>
+            <div *ngFor="let product of products | filterByName: filterName | sortByPrice: sortOrder">
                 <article >
                     <div class="product" >
                         <h2>{{product.name}}</h2>
                         <img src={{product.image}} alt="">
-                        <p>Description: {{product.description}}</p>
+                        <p>Description: <br>{{product.description}}</p>
                         <p>Prix: {{product.price | currency:'EUR'}}</p>
                     </div>
                     <button>Découvrir</button>
