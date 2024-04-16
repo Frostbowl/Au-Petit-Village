@@ -4,13 +4,14 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'sortByPrice'
 })
 export class SortByPricePipe implements PipeTransform {
-
-  transform(products: any[]): any[] {
-    return products.sort ((a:any, b:any)=> {
-      if (a.price < b.price) {return -1}
-      else if (a.price > b.price) {return 1}
-      else return 0;
-    });
+  transform(products: any[], sortOrder: string): any[] {
+    if (!products || !products.length) return [];
+    if (sortOrder === 'croissant') {
+      return products.slice().sort((a, b) => a.price - b.price);
+    } else if (sortOrder === 'decroissant') {
+      return products.slice().sort((a, b) => b.price - a.price);
+    } else {
+      return products;
+    }
   }
-
 }

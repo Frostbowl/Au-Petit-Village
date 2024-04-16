@@ -27,3 +27,24 @@ img{
     padding-bottom: 1rem;
 }
 
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    padding: 2rem 1rem;
+    margin: 2rem 0rem;    
+    border: 0.2rem solid black;
+}
+
+button{
+    background-color: #FDD90B ;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    border: 0.3rem solid #DA001E;
+    font-weight: bold;
+}

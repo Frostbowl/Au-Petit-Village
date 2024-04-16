@@ -8,6 +8,8 @@ import { ProductsService } from '../products.service';
 })
 export class HomeComponent implements OnInit {
   products: any[] = [];
+  sortOrder: string = 'croissant';
+
   constructor (private ProductsService: ProductsService) {}
   
   ngOnInit(): void {

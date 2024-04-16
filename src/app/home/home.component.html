@@ -10,15 +10,19 @@
         </section>
         <section class="produits">
             <h1>Nos figurines</h1>
-            <div class="product">
-                <select name="option" >
-                    <option value="croissant">Trier par prix croissant</option>
-                </select>
-                <article *ngFor="let product of ( products | sortByPrice);">
-                    <h2>{{product.name}}</h2>
-                    <img src={{product.image}} alt="">
-                    <p>Description: {{product.description}}</p>
-                    <p>Prix: {{product.price | currency:'EUR'}}</p>
+            <select [(ngModel)]="sortOrder" >
+                <option value="croissant">Trier par prix croissant</option>
+                <option value="decroissant">Trier par prix décroissant</option>
+            </select>
+            <div *ngFor="let product of products | sortByPrice: sortOrder">
+                <article >
+                    <div class="product" >
+                        <h2>{{product.name}}</h2>
+                        <img src={{product.image}} alt="">
+                        <p>Description: {{product.description}}</p>
+                        <p>Prix: {{product.price | currency:'EUR'}}</p>
+                    </div>
+                    <button>Découvrir</button>
                 </article>
             </div>
         </section>

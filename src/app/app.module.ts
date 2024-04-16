@@ -6,6 +6,7 @@ import localeFr from "@angular/common/locales/fr";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 
 import { HeaderComponent } from './header/header.component';
@@ -27,7 +28,8 @@ registerLocaleData(localeFr);
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [{
     provide: LOCALE_ID,
