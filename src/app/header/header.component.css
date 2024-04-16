@@ -25,6 +25,8 @@ ul, ul a{
     display: flex;
     justify-content: space-around;
     border-radius: 15px;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 ul a:hover{

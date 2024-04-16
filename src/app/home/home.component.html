@@ -1,0 +1,31 @@
+<main>
+    <div class="home">
+        <section class="presentation">
+            <h1>Bienvenue Gaulois et Gauloises ! </h1>
+            <h2>Découvrez ci-dessous notre gamme de figurines réalisées et paintes à la main</h2>
+            <img src="../../assets/img/statuegrande.jpg" alt="une mélée des personnages d'Astérix">
+            <p>Créer en 2004, la boutique Au Petit Village vous propose des statuettes de qualité, 100% artisanales et made in France,
+                idéal pour les collectionneurs et les décorateurs, mais qui saura aussi faire le bonheur des plus jeunes
+            </p>
+        </section>
+        <section class="produits">
+            <h1>Nos figurines</h1>
+            <select [(ngModel)]="sortOrder" >
+                <option value="croissant">Trier par prix croissant</option>
+                <option value="decroissant">Trier par prix décroissant</option>
+            </select>
+            <div *ngFor="let product of products | sortByPrice: sortOrder">
+                <article >
+                    <div class="product" >
+                        <h2>{{product.name}}</h2>
+                        <img src={{product.image}} alt="">
+                        <p>Description: {{product.description}}</p>
+                        <p>Prix: {{product.price | currency:'EUR'}}</p>
+                    </div>
+                    <button>Découvrir</button>
+                </article>
+            </div>
+        </section>
+    </div>
+
+</main>
